@@ -56,6 +56,11 @@ a{ color: var(--navy); text-decoration: none; }
   padding: 14px clamp(18px, 4vw, 48px);
   background: var(--navy-deep);
   border-bottom: 3px solid var(--red);
+  gap: 16px;
+}
+.topnav-date{
+  font-family:'IBM Plex Mono', monospace; font-size:.72rem; letter-spacing:.08em;
+  color: #9FB3C2; white-space:nowrap; flex-shrink:0;
 }
 .topnav .brand{
   color:#fff; font-family:'Poppins', sans-serif; font-weight:700; font-size:1.1rem;
@@ -270,10 +275,41 @@ table.datatable tr:nth-child(even) td{ background: rgba(0,0,0,.02); }
 .site-footer{
   background: var(--navy-deep); color:#9FB3C2; padding: 32px clamp(18px,4vw,48px);
   font-size:.84rem; text-align:center; font-family:'IBM Plex Mono',monospace;
+  display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap;
 }
 .site-footer a{ color:#E2A089; }
+.footer-name{
+  color:#fff; font-weight:600; font-family:'Poppins', sans-serif;
+  font-size:.95rem; letter-spacing:.02em;
+}
+.footer-sep{ color:#3A5060; }
 
-/* ---------- Homepage (map-only) ---------- */
+/* ---------- Homepage hero title ---------- */
+.hp-hero-title{
+  background: var(--navy);
+  text-align: center;
+  padding: clamp(52px, 9vw, 96px) clamp(18px, 4vw, 48px) clamp(40px, 7vw, 72px);
+  position: relative; overflow: hidden;
+}
+.hp-hero-title::before{
+  content:""; position:absolute; right:-80px; top:-80px;
+  width:340px; height:340px; border:1px solid rgba(255,255,255,.07); border-radius:50%;
+}
+.hp-hero-title::after{
+  content:""; position:absolute; left:-60px; bottom:-110px;
+  width:250px; height:250px; border:1px solid rgba(255,255,255,.05); border-radius:50%;
+}
+.hp-hero-title .eyebrow{ text-align:center; }
+.hp-hero-title h1{
+  color:#fff; font-size: clamp(2rem, 4.8vw, 3.6rem);
+  max-width: 900px; margin: 0 auto .5em; line-height:1.14;
+}
+.hp-subtitle{
+  font-family:'IBM Plex Mono', monospace; font-size:.88rem; letter-spacing:.1em;
+  color: #9FC6E0; margin:0;
+}
+
+/* ---------- Homepage intro (non più usato ma tenuto per compatibilità) ---------- */
 .hp-intro{ text-align:center; padding: 28px 20px 6px; }
 .hp-intro .eyebrow{ text-align:center; }
 .hp-intro h1{ color:var(--navy-deep); font-size: clamp(1.6rem,3vw,2.2rem); margin:0 auto .25em; max-width:760px; }
